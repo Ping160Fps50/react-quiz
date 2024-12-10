@@ -1,4 +1,7 @@
-function FinishScreen({ points, totalPoint, highScore, dispatch }) {
+import { useQuiz } from "../hooks/useQuiz";
+
+function FinishScreen() {
+  const { points, totalPoint, highScore, dispatch } = useQuiz();
   const percentagePoint = Math.ceil((points / totalPoint) * 100);
   return (
     <>

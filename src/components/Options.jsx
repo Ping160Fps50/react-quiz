@@ -1,4 +1,8 @@
-function Options({ options, dispatch, answer, correctOption }) {
+import { useQuiz } from "../hooks/useQuiz";
+
+function Options() {
+  const { question, dispatch, answer } = useQuiz();
+  const { options, correctOption } = question;
   const hasAnswered = answer !== null;
   return (
     <div className="options">
